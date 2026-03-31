@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define DT_DRV_COMPAT mediatek_mt8370_uart
+#define DT_DRV_COMPAT mediatek_mt8188_uart
 
 #include <zephyr/drivers/pinctrl.h>
 #include <zephyr/drivers/uart.h>

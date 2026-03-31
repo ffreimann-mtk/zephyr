@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define DT_DRV_COMPAT mediatek_mt8370_eint
+#define DT_DRV_COMPAT mediatek_mt8188_eint
 
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>

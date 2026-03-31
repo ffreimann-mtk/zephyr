@@ -5,6 +5,7 @@
 config PINCTRL_MT8365
 	bool "MediaTek MT8365 PINCTRL driver"
 	default y
+	depends on SOC_MT8365
     depends on DT_HAS_MEDIATEK_MT8365_PINCTRL_ENABLED
 	help
 	  Enable the MediaTek MT8365 PINCTRL driver
@@ -12,13 +13,15 @@ config PINCTRL_MT8365
 config PINCTRL_MT8370
 	bool "MediaTek MT8370 PINCTRL driver"
 	default y
-    depends on DT_HAS_MEDIATEK_MT8370_PINCTRL_ENABLED
+	depends on SOC_MT8370
+    depends on DT_HAS_MEDIATEK_MT8188_PINCTRL_ENABLED
 	help
 	  Enable the MediaTek MT8370 PINCTRL driver.
 
 config PINCTRL_MT8390
 	bool "MediaTek MT8390 PINCTRL driver"
 	default y
-    depends on DT_HAS_MEDIATEK_MT8390_PINCTRL_ENABLED
+	depends on SOC_MT8390
+    depends on DT_HAS_MEDIATEK_MT8188_PINCTRL_ENABLED
 	help
 	  Enable the MediaTek MT8390 PINCTRL driver.

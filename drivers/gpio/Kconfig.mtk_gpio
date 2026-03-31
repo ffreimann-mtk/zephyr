@@ -5,6 +5,7 @@
 config GPIO_MT8365
 	bool "MediaTek MT8365 GPIO driver"
 	default y
+	depends on SOC_MT8365
 	depends on DT_HAS_MEDIATEK_MT8365_GPIO_ENABLED
 	select PINCTRL
 	help
@@ -13,7 +14,8 @@ config GPIO_MT8365
 config GPIO_MT8370
 	bool "MediaTek MT8370 GPIO driver"
 	default y
-	depends on DT_HAS_MEDIATEK_MT8370_GPIO_ENABLED
+	depends on SOC_MT8370
+	depends on DT_HAS_MEDIATEK_MT8188_GPIO_ENABLED
 	select PINCTRL
 	help
 	  Enable the MediaTek MT8370 GPIO driver.
@@ -21,7 +23,8 @@ config GPIO_MT8370
 config GPIO_MT8390
 	bool "MediaTek MT8390 GPIO driver"
 	default y
-	depends on DT_HAS_MEDIATEK_MT8390_GPIO_ENABLED
+	depends on SOC_MT8390
+	depends on DT_HAS_MEDIATEK_MT8188_GPIO_ENABLED
 	select PINCTRL
 	help
 	  Enable the MediaTek MT8390 GPIO driver.

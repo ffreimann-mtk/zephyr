@@ -59,8 +59,8 @@ zephyr_library_sources_ifdef(CONFIG_PINCTRL_WCH_20X_30X_AFIO pinctrl_wch_20x_30x
 zephyr_library_sources_ifdef(CONFIG_PINCTRL_WCH_00X_AFIO pinctrl_wch_00x_afio.c)
 zephyr_library_sources_ifdef(CONFIG_PINCTRL_SF32LB52X pinctrl_sf32lb52x.c)
 zephyr_library_sources_ifdef(CONFIG_PINCTRL_MT8365 pinctrl_mt8365.c)
-zephyr_library_sources_ifdef(CONFIG_PINCTRL_MT8370 pinctrl_mt8370.c)
-zephyr_library_sources_ifdef(CONFIG_PINCTRL_MT8390 pinctrl_mt8390.c)
+zephyr_library_sources_ifdef(CONFIG_PINCTRL_MT8370 pinctrl_mt8188.c)
+zephyr_library_sources_ifdef(CONFIG_PINCTRL_MT8390 pinctrl_mt8188.c)
 
 add_subdirectory(renesas)
 

@@ -1,9 +1,9 @@
 # Copyright 2025 MediaTek
 # SPDX-License-Identifier: Apache-2.0
 
-description: MediaTek MT8370 EINT interrupt controller
+description: MediaTek MT8188 EINT interrupt controller
 
-compatible: "mediatek,mt8370-eint"
+compatible: "mediatek,mt8188-eint"
 
 include: [base.yaml]
 

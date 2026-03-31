@@ -1,7 +1,7 @@
 # Copyright (c) 2025 MediaTek
 # SPDX-License-Identifier: Apache-2.0
 
-description: MT8365 Pin Controller.
+description: MediaTek MT8365 Pin Controller.
 
 compatible: "mediatek,mt8365-pinctrl"
 

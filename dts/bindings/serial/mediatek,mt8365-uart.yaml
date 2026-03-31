@@ -1,7 +1,7 @@
 # Copyright 2025 MediaTek
 # SPDX-License-Identifier: Apache-2.0
 
-description: MT8365 UART
+description: MediaTek MT8365 UART
 
 compatible: "mediatek,mt8365-uart"
 

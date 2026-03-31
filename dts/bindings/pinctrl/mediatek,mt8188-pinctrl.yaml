@@ -1,9 +1,9 @@
 # Copyright (c) 2025 MediaTek
 # SPDX-License-Identifier: Apache-2.0
 
-description: MT8390 Pin Controller.
+description: MediaTek MT8188 Pin Controller.
 
-compatible: "mediatek,mt8390-pinctrl"
+compatible: "mediatek,mt8188-pinctrl"
 
 include: [base.yaml, pinctrl-device.yaml, pinctrl-device.yaml]
 
@@ -14,7 +14,7 @@ properties:
 child-binding:
   child-binding:
     description: |
-        MT8390 pins controller pin configuration states.
+        MT8370 pins controller pin configuration states.
 
     include:
       - name: pincfg-node.yaml

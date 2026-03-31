@@ -5,6 +5,7 @@
 config UART_MT8365
 	bool "MediaTek MT8365 UART driver"
 	default y
+	depends on SOC_MT8365
 	depends on DT_HAS_MEDIATEK_MT8365_UART_ENABLED
 	select PINCTRL
 	select SERIAL_HAS_DRIVER
@@ -15,7 +16,8 @@ config UART_MT8365
 config UART_MT8370
 	bool "MediaTek MT8370 UART driver"
 	default y
-	depends on DT_HAS_MEDIATEK_MT8370_UART_ENABLED
+	depends on SOC_MT8370
+	depends on DT_HAS_MEDIATEK_MT8188_UART_ENABLED
 	select PINCTRL
 	select SERIAL_HAS_DRIVER
 	select SERIAL_SUPPORT_INTERRUPT
@@ -25,7 +27,8 @@ config UART_MT8370
 config UART_MT8390
 	bool "MediaTek MT8390 UART driver"
 	default y
-	depends on DT_HAS_MEDIATEK_MT8390_UART_ENABLED
+	depends on SOC_MT8390
+	depends on DT_HAS_MEDIATEK_MT8188_UART_ENABLED
 	select PINCTRL
 	select SERIAL_HAS_DRIVER
 	select SERIAL_SUPPORT_INTERRUPT

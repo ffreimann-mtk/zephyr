@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define DT_DRV_COMPAT mediatek_mt8390_gpio
+#define DT_DRV_COMPAT mediatek_mt8188_gpio
 
 #include <zephyr/drivers/uart.h>
 #include <zephyr/drivers/gpio/gpio_utils.h>

@@ -1,7 +1,7 @@
 # Copyright (c) 2025 MediaTek
 # SPDX-License-Identifier: Apache-2.0
 
-description: MTK I2S node
+description: MediaTek MT8365 I2S
 
 compatible: "mediatek,mt8365-i2s"
 

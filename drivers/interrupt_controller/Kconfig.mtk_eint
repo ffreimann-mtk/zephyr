@@ -4,6 +4,7 @@
 config MTK_EINT_MT8365
 	bool "MediaTek MT8365 EINT driver"
 	default y
+	depends on SOC_MT8365
 	depends on DT_HAS_MEDIATEK_MT8365_EINT_ENABLED
 	help
 	  Enable the MediaTek MT8365 EINT driver.
@@ -11,13 +12,15 @@ config MTK_EINT_MT8365
 config MTK_EINT_MT8370
 	bool "MediaTek MT8370 EINT driver"
 	default y
-	depends on DT_HAS_MEDIATEK_MT8370_EINT_ENABLED
+	depends on SOC_MT8370
+	depends on DT_HAS_MEDIATEK_MT8188_EINT_ENABLED
 	help
 	  Enable the MediaTek MT8370 EINT driver.
 
 config MTK_EINT_MT8390
 	bool "MediaTek MT8390 EINT driver"
 	default y
-	depends on DT_HAS_MEDIATEK_MT8390_EINT_ENABLED
+	depends on SOC_MT8390
+	depends on DT_HAS_MEDIATEK_MT8188_EINT_ENABLED
 	help
 	  Enable the MediaTek MT8390 EINT driver.

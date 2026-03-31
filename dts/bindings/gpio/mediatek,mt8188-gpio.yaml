@@ -1,9 +1,9 @@
 # Copyright (c) 2025 MediaTek
 # SPDX-License-Identifier: Apache-2.0
 
-description: MT8390 GPIO
+description: MediaTek MT8188 GPIO
 
-compatible: "mediatek,mt8390-gpio"
+compatible: "mediatek,mt8188-gpio"
 
 include: [gpio-controller.yaml, base.yaml]
 
