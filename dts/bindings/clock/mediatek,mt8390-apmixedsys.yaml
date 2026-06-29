@@ -1,0 +1,15 @@
+# Copyright (c) 2026, MediaTek
+# SPDX-License-Identifier: Apache-2.0
+
+description: MediaTek MT8390 APMIXEDSYS PLL clock controller
+
+compatible: "mediatek,mt8390-apmixedsys"
+
+include: [clock-controller.yaml, base.yaml]
+
+properties:
+  "#clock-cells":
+    const: 1
+
+clock-cells:
+  - name

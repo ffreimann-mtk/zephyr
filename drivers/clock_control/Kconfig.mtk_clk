@@ -16,3 +16,11 @@ config CLOCK_CONTROL_MT8390
 	depends on DT_HAS_MEDIATEK_MT8188_CLK_INFRA_A0_ENABLED
 	help
 	  Enable support for MediaTek MT8390 clock control driver.
+
+config CLOCK_CONTROL_MT8390_APMIXED
+	bool "MT8390 APMIXEDSYS PLL clock driver"
+	default y
+	depends on CLOCK_CONTROL
+	depends on DT_HAS_MEDIATEK_MT8390_APMIXEDSYS_ENABLED
+	help
+	  Enable the APMIXEDSYS PLL driver for MT8390 (APLL1/APLL2 audio PLLs).

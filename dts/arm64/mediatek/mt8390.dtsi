@@ -73,6 +73,12 @@
 		status = "okay";
 	};
 
+	apmixedsys: apmixedsys@1000c000 {
+		compatible = "mediatek,mt8390-apmixedsys";
+		reg = <0x1000c000 0x1000>;
+		#clock-cells = <1>;
+	};
+
 	clk_infra_a0: clk_infra_a0@10001000 {
 		compatible = "mediatek,mt8188-clk_infra_a0";
 		reg = <0x10001000 0x1000>;
