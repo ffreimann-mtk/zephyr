@@ -11,21 +11,21 @@
 	uart1_default: uart1_default {
 		group1 {
 			pinmux = <PINMUX_PIN_33__FUNC_O_UTXD1>,
-					 <PINMUX_PIN_34__FUNC_I1_URXD1>;
+				 <PINMUX_PIN_34__FUNC_I1_URXD1>;
 		};
 
 		trigger_response {
 			pinmux = <PINMUX_PIN_38__FUNC_B_GPIO38>,
-					 <PINMUX_PIN_40__FUNC_B_GPIO40>;
+				 <PINMUX_PIN_40__FUNC_B_GPIO40>;
 		};
 	};
 
-	i2s_default: i2s_default {
+	etdm_default: etdm_default {
 		group1 {
-			pinmux = <PINMUX_PIN_107__FUNC_B0_I2SIN_MCK>,
-					 <PINMUX_PIN_108__FUNC_B0_I2SIN_BCK>,
-					 <PINMUX_PIN_109__FUNC_B0_I2SIN_WS>,
-					 <PINMUX_PIN_110__FUNC_I0_I2SIN_D0>;
+			pinmux = <PINMUX_PIN_127__FUNC_B0_TDMIN_LRCK>,
+				 <PINMUX_PIN_128__FUNC_I0_TDMIN_DI>,
+				 <PINMUX_PIN_125__FUNC_B0_TDMIN_MCK>,
+				 <PINMUX_PIN_126__FUNC_B0_TDMIN_BCK>;
 		};
 	};
 };

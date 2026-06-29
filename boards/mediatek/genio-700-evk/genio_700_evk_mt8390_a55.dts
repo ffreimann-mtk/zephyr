@@ -61,8 +61,8 @@
 		};
 	};
 
-	dram: memory@8000 {
-		reg = <0x00008000 DT_SIZE_M(2)>;
+	dram: memory@6b000000 {
+		reg = <0x6b000000 DT_SIZE_M(4)>;
 	};
 };
 
@@ -78,10 +78,16 @@
 	status = "okay";
 };
 
-/*
-&i2s {
-	pinctrl-0 = <&i2s_default>;
+&gpio96_127 {
+	status = "okay";
+};
+
+&gpio128_159 {
+	status = "okay";
+};
+
+&afe {
+	pinctrl-0 = <&etdm_default>;
 	pinctrl-names = "default";
 	status = "okay";
 };
-*/

@@ -11,7 +11,7 @@ arch: arm64
 toolchain:
   - zephyr
   - cross-compile
-ram: 1024
+ram: 4096
 supported:
   - pinctrl
   - uart
