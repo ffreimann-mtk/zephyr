@@ -72,4 +72,6 @@ source "drivers/audio/Kconfig.dmic_nxp_micfil"
 
 endif # AUDIO_DMIC
 
+source "drivers/audio/mediatek/mt8390/Kconfig.mt8390_afe"
+
 endif # AUDIO

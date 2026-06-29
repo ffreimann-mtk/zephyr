@@ -18,3 +18,5 @@ zephyr_library_sources_ifdef(CONFIG_AUDIO_CODEC_MAX98091 max98091.c)
 zephyr_library_sources_ifdef(CONFIG_AUDIO_DMIC_AMBIQ_PDM dmic_ambiq_pdm.c)
 zephyr_library_sources_ifdef(CONFIG_AUDIO_CODEC_DA7212 da7212.c)
 zephyr_library_sources_ifdef(CONFIG_AUDIO_DMIC_NXP_MICFIL dmic_nxp_micfil.c)
+
+add_subdirectory_ifdef(CONFIG_AUDIO_MEDIATEK_MT8390_AFE mediatek)

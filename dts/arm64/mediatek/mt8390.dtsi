@@ -216,13 +216,43 @@
         clock-frequency = <26000000>;
 		status = "disabled";
 	};
-/*
-	i2s: i2s@10b10000 {
-		compatible = "mediatek,mt8188-i2s";
-		reg = <0x10b10000 0x1000>;
+	afe: afe@10b10000 {
+		compatible = "mediatek,mt8390-afe";
+		reg = <0x10b10000 0x10000>;
 		interrupt-parent = <&gic>;
-		interrupts = <GIC_SPI 822 IRQ_TYPE_LEVEL_LOW IRQ_DEFAULT_PRIORITY>;
+		interrupts = <GIC_SPI 822 IRQ_TYPE_LEVEL_HIGH IRQ_DEFAULT_PRIORITY>;
+		clocks = <&apmixedsys CLK_APMIXED_APLL1>,
+			 <&apmixedsys CLK_APMIXED_APLL2>,
+			 <&topckgen CLK_TOP_APLL12_CK_DIV0>,
+			 <&topckgen CLK_TOP_APLL12_CK_DIV1>,
+			 <&topckgen CLK_TOP_APLL12_CK_DIV2>,
+			 <&topckgen CLK_TOP_APLL12_CK_DIV3>,
+			 <&topckgen CLK_TOP_APLL12_CK_DIV9>,
+			 <&topckgen CLK_TOP_A1SYS_HP>,
+			 <&topckgen CLK_TOP_AUD_INTBUS>,
+			 <&topckgen CLK_TOP_AUDIO_H>,
+			 <&topckgen CLK_TOP_AUDIO_LOCAL_BUS>,
+			 <&topckgen CLK_TOP_I2SO1>,
+			 <&topckgen CLK_TOP_I2SO2>,
+			 <&topckgen CLK_TOP_I2SI1>,
+			 <&topckgen CLK_TOP_I2SI2>,
+			 <&topckgen CLK_TOP_APLL1_D4>,
+			 <&topckgen CLK_TOP_APLL2_D4>,
+			 <&topckgen CLK_TOP_APLL12_CK_DIV4>,
+			 <&topckgen CLK_TOP_A2SYS>,
+			 <&topckgen CLK_TOP_AUD_IEC>,
+			 <&clk_infra_a0 CLK_INFRA_AO_AUDIO>,
+			 <&clk_infra_a0 CLK_INFRA_AO_AUDIO_26M_BCLK>,
+			 <&clk_infra_a0 CLK_INFRA_AO_I2S_DMA>;
+		clock-names = "apll1", "apll2",
+			      "apll12_div0", "apll12_div1", "apll12_div2",
+			      "apll12_div3", "apll12_div9",
+			      "top_a1sys_hp", "top_aud_intbus", "top_audio_h",
+			      "top_audio_local_bus",
+			      "top_i2so1", "top_i2so2", "top_i2si1", "top_i2si2",
+			      "apll1_d4", "apll2_d4", "apll12_div4",
+			      "top_a2sys", "top_aud_iec",
+			      "infra_audio", "infra_audio_26m", "infra_i2s_dma";
 		status = "disabled";
 	};
-*/
 };

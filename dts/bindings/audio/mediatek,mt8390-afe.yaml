@@ -1,0 +1,75 @@
+# Copyright (c) 2026, MediaTek
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  MediaTek MT8390 AFE (Audio Front End) controller.
+  Supports eTDM_IN and eTDM_OUT audio paths with DMA via memif.
+  Derived from Linux Documentation/devicetree/bindings/sound/mediatek,mt8188-afe.yaml.
+
+compatible: "mediatek,mt8390-afe"
+
+include: [base.yaml, pinctrl-device.yaml]
+
+properties:
+  reg:
+    required: true
+
+  pinctrl-0:
+    required: true
+
+  pinctrl-names:
+    required: true
+
+  interrupts:
+    required: true
+
+  clocks:
+    required: true
+
+  clock-names:
+    required: true
+    description: |
+      Clock names list (23 entries):
+        apll1, apll2,
+        apll12_div0, apll12_div1, apll12_div2, apll12_div3, apll12_div9,
+        top_a1sys_hp, top_aud_intbus, top_audio_h, top_audio_local_bus,
+        top_i2so1, top_i2so2, top_i2si1, top_i2si2,
+        apll1_d4, apll2_d4, apll12_div4,
+        top_a2sys, top_aud_iec,
+        infra_audio, infra_audio_26m, infra_i2s_dma
+
+  mediatek,etdm-in1-cowork-source:
+    type: int
+    description: Cowork source for eTDM IN1 (1=IN2, 2=IN3, 3=IN4)
+
+  mediatek,etdm-in2-cowork-source:
+    type: int
+    description: Cowork source for eTDM IN2 (0=IN1, 2=IN3, 3=IN4)
+
+  mediatek,etdm-out1-cowork-source:
+    type: int
+    description: Cowork source for eTDM OUT1 (0=OUT2, 1=OUT3, 3=OUT4)
+
+  mediatek,etdm-out2-cowork-source:
+    type: int
+    description: Cowork source for eTDM OUT2 (0=OUT1, 1=OUT3, 2=OUT4)
+
+  mediatek,etdm-in1-multi-pin-mode:
+    type: boolean
+    description: Enable I2S multi-pin mode for eTDM IN1
+
+  mediatek,etdm-in2-multi-pin-mode:
+    type: boolean
+    description: Enable I2S multi-pin mode for eTDM IN2
+
+  mediatek,etdm-out1-multi-pin-mode:
+    type: boolean
+    description: Enable I2S multi-pin mode for eTDM OUT1
+
+  mediatek,etdm-out2-multi-pin-mode:
+    type: boolean
+    description: Enable I2S multi-pin mode for eTDM OUT2
+
+  mediatek,etdm-out3-multi-pin-mode:
+    type: boolean
+    description: Enable I2S multi-pin mode for eTDM OUT3

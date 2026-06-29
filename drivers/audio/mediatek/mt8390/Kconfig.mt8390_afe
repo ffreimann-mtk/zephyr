@@ -1,0 +1,15 @@
+# Copyright (c) 2026 MediaTek
+# SPDX-License-Identifier: Apache-2.0
+
+config AUDIO_MEDIATEK_MT8390_AFE
+	bool "MediaTek MT8390 AFE audio driver"
+	default y
+	depends on DT_HAS_MEDIATEK_MT8390_AFE_ENABLED
+	depends on CLOCK_CONTROL_MT8390
+	depends on CLOCK_CONTROL_MT8390_APMIXED
+	depends on CLOCK_CONTROL_MT8390_TOPCKGEN
+	select PINCTRL
+	help
+	  Enable the MediaTek MT8390 AFE (Audio Front End) driver.
+	  Supports eTDM_IN and eTDM_OUT audio paths with DMA via
+	  memory interface (memif) control registers.
