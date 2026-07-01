@@ -94,8 +94,6 @@
 	pinctrl: pinctrl@10005000 {
 		compatible = "mediatek,mt8188-pinctrl";
 		reg = <0x10005000 0x1000>;
-		#address-cells = <1>;
-		#size-cells = <0>;
 		status = "okay";
 	};
 
