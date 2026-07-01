@@ -4,7 +4,7 @@
 config CLOCK_CONTROL_MT8370
 	bool "MT8370 clock control driver"
 	default y
-    depends on CLOCK_CONTROL
+	depends on CLOCK_CONTROL
 	depends on DT_HAS_MEDIATEK_MT8188_CLK_INFRA_A0_ENABLED
 	help
 	  Enable support for MediaTek MT8370 clock control driver.
@@ -12,7 +12,7 @@ config CLOCK_CONTROL_MT8370
 config CLOCK_CONTROL_MT8390
 	bool "MT8390 clock control driver"
 	default y
-    depends on CLOCK_CONTROL
+	depends on CLOCK_CONTROL
 	depends on DT_HAS_MEDIATEK_MT8188_CLK_INFRA_A0_ENABLED
 	help
 	  Enable support for MediaTek MT8390 clock control driver.
