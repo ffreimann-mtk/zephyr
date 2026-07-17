@@ -23,7 +23,6 @@
 	chosen {
 		zephyr,console = &uart1;
 		zephyr,sram = &dram0;
-		zephyr,pcie-controller = &pcie0;
 	};
 
 	trigger {
@@ -64,35 +63,6 @@
 
 	dram0: memory@8000 {
 		reg = <0x0 0x00008000 0x0 0x200000>;
-	};
-
-	pcie0: pcie@6b800000 {
-		compatible = "pci-host-ecam-generic";
-		device_type = "pci";
-		reg = <0x0 0x6b800000 0x00 0x100000>;
-		#address-cells = <0x03>;
-		#size-cells = <0x02>;
-		ranges = <0x03000000 0x00 0x6b900000 0x0 0x6b900000 0x00 0x1000>;
-
-		status = "okay";
-
-		ivshmem0: ivshmem@0 {
-			compatible = "qemu,ivshmem";
-
-            ivshmem-v2;
-
-            interrupt-parent = <&gic>;
-            interrupts = <GIC_SPI 74 IRQ_TYPE_LEVEL_HIGH IRQ_DEFAULT_PRIORITY>;
-
-			vendor-id = <0x110a>;			/* Siemens */
-			device-id = <0x4106>;			/* IVSHMEM */
-			class-rev = <0xff000000>;       /* PCI_CLASS_OTHERS | IVSHMEM_PROTO_UNDEFINED */
-			class-rev-mask = <0xffffff00>;	/* PCI_CLASS_MASK | IVSHMEM_PROTO_MASK */
-
-			reg = <0x00 0x00 0x00 0x00 0x01>;
-
-			status = "okay";
-		};
 	};
 };
 
