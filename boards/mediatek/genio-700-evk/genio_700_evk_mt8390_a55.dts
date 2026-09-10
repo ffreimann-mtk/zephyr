@@ -12,7 +12,7 @@
 #include "genio_700_evk-pinctrl.dtsi"
 
 / {
-	model = "MediaTek GENION 700 EVK (4*Cortex-A55 and 4*Cortex-A78)";
+	model = "MediaTek GENION 700 EVK (6*Cortex-A55 and 2*Cortex-A78)";
 	compatible = "mediatek,mt8390-evk";
 
 	aliases {
@@ -22,7 +22,7 @@
 
 	chosen {
 		zephyr,console = &uart1;
-		zephyr,sram = &dram;
+		zephyr,sram = &dram0;
 	};
 
 	trigger {
@@ -61,8 +61,8 @@
 		};
 	};
 
-	dram: memory@6b000000 {
-		reg = <0x6b000000 DT_SIZE_M(4)>;
+	dram0: memory@8000 {
+		reg = <0x0 0x00008000 0x0 0x200000>;
 	};
 };
 
