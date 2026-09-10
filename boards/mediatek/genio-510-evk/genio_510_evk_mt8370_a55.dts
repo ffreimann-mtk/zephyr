@@ -22,7 +22,7 @@
 
 	chosen {
 		zephyr,console = &uart1;
-		zephyr,sram = &dram;
+		zephyr,sram = &dram0;
 	};
 
 	trigger {
@@ -61,8 +61,8 @@
 		};
 	};
 
-	dram: memory@8000 {
-		reg = <0x00008000 DT_SIZE_M(2)>;
+	dram0: memory@8000 {
+		reg = <0x0 0x00008000 0x0 0x200000>;
 	};
 };
 
